@@ -29,8 +29,7 @@ const Blogs = props => {
                           console.log(item.cover_image.url);
                           return(
                             <div className="col-md-3">
-                        <Card imgsrc={item.cover_image.url} title={item.title} content="Paragraph 1 Lorem ipsum dolor sit amet, connect. Lorem ips. Lorem ipsum dolor. Lorem ipsum
-                    .lorum dolor. Lorem ipsum dolor. Lorem" />
+                        <Card imgsrc={item.cover_image.url} title={item.title} content={item.content} />
                     </div>
                           )
                 }
