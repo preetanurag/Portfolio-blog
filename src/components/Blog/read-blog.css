@@ -1,3 +1,12 @@
 body{
     background: radial-gradient(#e5e5e5, #fff, #e5e5e5);
 }
+
+blockquote {
+    color: #666;
+    margin: 0;
+    padding: 2em;
+    border-left: 0.5em rgb(195, 214, 27) solid;
+    background-color: rgb(182, 248, 248);
+
+}

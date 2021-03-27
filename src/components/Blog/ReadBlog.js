@@ -53,7 +53,7 @@ const ReadBlog = props => {
                }
                 
                 <div style={{marginTop: "10vh"}}>
-                <ReactMarkdown source={Blog.content} renderers={{ code: Component, image: Image }} />
+                <ReactMarkdown source={Blog.content} escapeHtml={false} renderers={{ code: Component, image: Image }} />
                 </div>    
                 
             </div>
