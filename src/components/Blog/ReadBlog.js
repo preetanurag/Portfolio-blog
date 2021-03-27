@@ -48,17 +48,27 @@ const ReadBlog = props => {
                {isloaded==false ?
                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" alt="cover" className="img-thumbnail img-fluid" /> :
 
-                   <img src={Blog.cover_image.url} alt="cover" className="img-thumbnail img-fluid" /> 
+                   <img src={Blog.cover_image.url} alt="cover" className="img-thumbnail img-fluid" style={{width: '100%', height: '50rem'}} /> 
 
                }
                 
                     
-                <ReactMarkdown source={Blog.content} renderers={{ code: Component }} />
+                <ReactMarkdown source={Blog.content} renderers={{ code: Component, image: Image }} />
                 
             </div>
         )
 
 
+}
+
+const Image = ({alt, src}) =>{
+    return (
+        <img
+          style={{ height: "40rem", width: "45rem" ,marginLeft: "5rem" }}
+          alt={alt}
+          src={src}
+        />
+      );
 }
 
 const Component = ({value, language}) => {
