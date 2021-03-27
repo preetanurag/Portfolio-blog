@@ -52,8 +52,9 @@ const ReadBlog = props => {
 
                }
                 
-                    
+                <div style={{marginTop: "10vh"}}>
                 <ReactMarkdown source={Blog.content} renderers={{ code: Component, image: Image }} />
+                </div>    
                 
             </div>
         )
@@ -64,7 +65,7 @@ const ReadBlog = props => {
 const Image = ({alt, src}) =>{
     return (
         <img
-          style={{ height: "40rem", width: "45rem" ,marginLeft: "5rem" }}
+          style={{ height: "65vh", width: "65vw" ,marginLeft: "2vw" }}
           alt={alt}
           src={src}
         />
