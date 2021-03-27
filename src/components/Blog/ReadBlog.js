@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./read-blog.css";
 import ReactMarkdown from 'react-markdown'
 
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 
 
@@ -51,11 +53,20 @@ const ReadBlog = props => {
                }
                 
                     
-                <ReactMarkdown>{Blog.content}</ReactMarkdown>
+                <ReactMarkdown source={Blog.content} renderers={{ code: Component }} />
                 
             </div>
         )
 
+
 }
+
+const Component = ({value, language}) => {
+    return (
+      <SyntaxHighlighter language={language ?? null} style={dark}>
+        {value ?? ''}
+      </SyntaxHighlighter>
+    );
+  };
 
 export default ReadBlog;
