@@ -16,7 +16,7 @@ const ReadBlog = props => {
 
    
     const get = () =>{
-        axios.get("https://blog-api-v01.herokuapp.com/blogs/60426b1a08a6e46c81c37f36")
+        axios.get(`https://blog-api-v01.herokuapp.com/blogs/${props.selected}`)
         .then(response =>{
              console.log(response.data);
             setBlog(response.data)

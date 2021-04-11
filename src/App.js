@@ -4,6 +4,7 @@ import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
+import Blog from "./components/Blog/BlogList";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/Resume";
@@ -11,8 +12,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ScrollToTop from "./components/ScrollToTop";
+import ReadBlog from "./components/Blog/ReadBlog";
 function App() {
   const [load, upadateLoad] = useState(true);
+  const [showcomponent,setshowcomponent] = React.useState(false);
   useEffect(() => {
     setTimeout(() => {
       upadateLoad(false);
@@ -28,6 +31,12 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/project" component={Projects} />
           <Route path="/about" component={About} />
+          {/* {showcomponent ?
+           <Route path="/blog" component={ReadBlog} /> :
+           <Route path="/blog" component={Blog} />
+           }  */}
+           <Route path="/blog" component={Blog} />
+          
           <Route path="/resume" component={Resume} />
         </Switch>
         <Footer />

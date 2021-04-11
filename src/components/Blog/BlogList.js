@@ -3,11 +3,13 @@ import img1 from "../../Assets/home-bg.jpg"
 import Card from "./BlogCard";
 import axios from "axios";
 
-
+import ReadBlog from "./ReadBlog";
 
 //get();
 const Blogs = props => {
     const [Blog, setBlog] = React.useState([]);
+    const [t,sett] = React.useState(true);
+    const [selected, setselected] = React.useState([]);
     const get = () =>{
         axios.get("https://blog-api-v01.herokuapp.com/blogs/")
         .then(response =>{
@@ -18,9 +20,13 @@ const Blogs = props => {
     } 
     React.useEffect(() => {
         get(); 
-    },[])  
+    },[]) 
+    
+    console.log(selected)
     
         return (
+<div>
+            {t ?
             <div className="container-fluid d-flex justify-content-center">
                 <div className="row">
                     
@@ -29,7 +35,7 @@ const Blogs = props => {
                           console.log(item.cover_image.url);
                           return(
                             <div className="col-md-3">
-                        <Card imgsrc={item.cover_image.url} title={item.title} content={item.content} />
+                        <Card sett={sett} id={item.id} imgsrc={item.cover_image.url} title={item.title} content={item.content} setselected={setselected}/>
                     </div>
                           )
                 }
@@ -37,7 +43,17 @@ const Blogs = props => {
                     
                 </div>
             </div>
+
+             : 
+            
+
+            <ReadBlog selected={selected}/>
+             
+
+            }
+            </div>
         )
+        
     }
 
 export default Blogs

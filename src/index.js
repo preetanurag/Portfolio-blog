@@ -7,7 +7,8 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Card />
+    {/* <Card /> */}
+    <App/>
   </React.StrictMode>,
   document.getElementById("root")
 );
