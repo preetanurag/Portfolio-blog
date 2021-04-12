@@ -35,6 +35,7 @@ const ReadBlog = props => {
     },[])  
     
         return (
+            <div className="main">
             <div className="container">
                 {/* <h1>{Blog.title}</h1> */}
 
@@ -56,6 +57,7 @@ const ReadBlog = props => {
                 <ReactMarkdown source={Blog.content} escapeHtml={false} renderers={{ code: Component, image: Image }} />
                 </div>    
                 
+            </div>
             </div>
         )
 

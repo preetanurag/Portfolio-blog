@@ -29,10 +29,11 @@ const onbuttonclick = () =>{
             <div className="card-body text-dark">
                 <h4 className="card-title">{props.title}</h4>
                 <p className="card-text text-secondary">
-                   {props.content}
+                   {/* {props.content} */}
                 </p>
                 {/* <a href="#" className="btn btn-outline-success">Read Blog</a> */}
                 <button
+                className="btn btn-outline-danger"
                 onClick={onbuttonclick}
                 >
                 Read Blog
