@@ -77,28 +77,7 @@ function Projects() {
             />
           </Col>
         </Row>
-        <h1 className="project-heading">
-          My Recent <strong className="purple">Blog </strong> Posts
-        </h1>
-        <p style={{ color: "white" }}>Do give a read to some of my blogs</p>
-        <Row style={{ justifyContent: "center" }}>
-          <Col md={4} className="blog-card">
-            <BlogCard
-              imgPath={algo}
-              link=""
-              title="Cracking Interview"
-              site="gitbook.com"
-            />
-          </Col>
-          <Col md={4} className="blog-card">
-            <BlogCard
-              imgPath={plant}
-              link="https://medium.com/jovianml/plant-ai-c8fc95ed90e6"
-              title="Plant AI"
-              site="medium.com"
-            />
-          </Col>
-        </Row>
+       
       </Container>
     </Container>
   );

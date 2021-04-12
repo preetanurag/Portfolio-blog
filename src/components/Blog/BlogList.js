@@ -26,15 +26,25 @@ const Blogs = props => {
     
         return (
 <div>
+
+
             {t ?
+            
+            <div className="main-head">
+                <h1 className="project-heading">
+          My Recent <strong className="purple">Blog </strong> Posts
+        </h1>
+        <p style={{ color: "white" }}>Do give a read to some of my blogs</p>
+
             <div className="container-fluid d-flex justify-content-center">
+                
                 <div className="row">
                     
 
                     {Blog.map((item, index) =>{
                           console.log(item.cover_image.url);
                           return(
-                            <div className="col-md-3">
+                            <div className="col-md-4">
                         <Card sett={sett} id={item.id} imgsrc={item.cover_image.url} title={item.title} content={item.content} setselected={setselected}/>
                     </div>
                           )
@@ -43,7 +53,7 @@ const Blogs = props => {
                     
                 </div>
             </div>
-
+                </div>
              : 
             
 
