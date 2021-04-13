@@ -34,14 +34,15 @@ const onbuttonclick = () =>{
                 </p>
                 {/* <a href="#" className="btn btn-outline-success">Read Blog</a> */}
                
+                <Link  to ={`/readblog/:${props.id}`}>
                 <button
                 
                 className="btn btn-outline-danger"
                 onClick={onbuttonclick}
-                > <Link  to ={`/readblog/:${props.id}`}>
+                > 
                 Read Blog
-                </Link>
                 </button>
+                </Link>
   
             </div>
         </div>
