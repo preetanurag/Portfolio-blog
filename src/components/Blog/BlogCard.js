@@ -38,7 +38,7 @@ const onbuttonclick = () =>{
                 
                 className="btn btn-outline-danger"
                 onClick={onbuttonclick}
-                > <Link  to ={`/readblog/:${props.selected}`}>
+                > <Link  to ={`/readblog/:${props.id}`}>
                 Read Blog
                 </Link>
                 </button>
