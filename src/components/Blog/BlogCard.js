@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./card-style.css";
 import ReadBlog from "./ReadBlog";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route,Link, Switch } from "react-router-dom";
 
 
 const BlogCard = props => {
@@ -11,17 +11,18 @@ const BlogCard = props => {
 console.log(props.id)
  //const [showcomponent,setshowcomponent] = React.useState(false);
 
+ 
 
 const onbuttonclick = () =>{
     //setshowcomponent(true);
     props.sett(false);
     props.setselected(props.id)
+    
 }
 
 
 
     return(
-        
         <div className="card text-center shadow">
             <div className="overflow">
                 <img src={props.imgsrc} alt="image1" className="card-img-top" />
@@ -32,21 +33,18 @@ const onbuttonclick = () =>{
                    {/* {props.content} */}
                 </p>
                 {/* <a href="#" className="btn btn-outline-success">Read Blog</a> */}
+               
                 <button
+                
                 className="btn btn-outline-danger"
                 onClick={onbuttonclick}
-                >
+                > <Link  to ={`/readblog/:${props.selected}`}>
                 Read Blog
+                </Link>
                 </button>
-                
-                
-
-                
-               
-                
+  
             </div>
         </div>
-
        
     );
 }

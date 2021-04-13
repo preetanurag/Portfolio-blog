@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import img1 from "../../Assets/home-bg.jpg"
 import Card from "./BlogCard";
 import axios from "axios";
-
+import { BrowserRouter as Router, Route,Link, Switch } from "react-router-dom";
+import Navbar from "../Navbar";
 import ReadBlog from "./ReadBlog";
 
 //get();
 const Blogs = props => {
     const [Blog, setBlog] = React.useState([]);
     const [t,sett] = React.useState(true);
-    const [selected, setselected] = React.useState([]);
+    //const [selected, setselected] = React.useState([]);
     const get = () =>{
         axios.get("https://blog-api-v01.herokuapp.com/blogs/")
         .then(response =>{
@@ -22,7 +23,7 @@ const Blogs = props => {
         get(); 
     },[]) 
     
-    console.log(selected)
+    
     
         return (
 <div>
@@ -45,7 +46,7 @@ const Blogs = props => {
                           console.log(item.cover_image.url);
                           return(
                             <div className="col-md-4">
-                        <Card sett={sett} id={item.id} imgsrc={item.cover_image.url} title={item.title} content={item.content} setselected={setselected}/>
+                        <Card sett={sett} id={item.id} imgsrc={item.cover_image.url} title={item.title} content={item.content} selected={props.selected} setselected={props.setselected}/>
                     </div>
                           )
                 }
@@ -54,10 +55,23 @@ const Blogs = props => {
                 </div>
             </div>
                 </div>
-             : 
-            
+             : (
+           
+        
+                  
+          <Router>
+              <Navbar />
+              <Switch>
+                  <Route path="/readblog" component={ReadBlog}>
+                  {/* <ReadBlog selected={props.selected}/> */}
+           </Route>
+           </Switch>
+           </Router>
 
-            <ReadBlog selected={selected}/>
+             )
+
+        
+           
              
 
             }

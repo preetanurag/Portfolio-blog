@@ -8,15 +8,16 @@ import 'react-circular-progressbar/dist/styles.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import ChangingProgressProvider from "./ChangingProgressProvider";
-
+import { BrowserRouter as Router, Route,Link, Switch,useParams } from "react-router-dom";
 
 const percentage = 66;
 const ReadBlog = props => {
 
+    let { id } = useParams();
     const [Blog, setBlog] = React.useState([]);
     const [isloaded,setisloaded] = React.useState(false);
 
-   
+   console.log(props.selected)
     const get = () =>{
         axios.get(`https://blog-api-v01.herokuapp.com/blogs/${props.selected}`)
         .then(response =>{
@@ -30,7 +31,7 @@ const ReadBlog = props => {
     const handletime = () =>{
         setTimeout(()=>{
             get();
-        },3000)
+        },5000)
     }
     React.useEffect(() => {
         handletime(); 
@@ -52,7 +53,7 @@ const ReadBlog = props => {
             //    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" alt="cover" className="img-thumbnail img-fluid" /> 
 
             <div style={{ width: 200, height: 200, padding:20, marginLeft :"430px"}}>
-            <ChangingProgressProvider values={[0, 20, 40, 60, 80, 100]}>
+            <ChangingProgressProvider values={[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]}>
         {percentage => (
           <CircularProgressbar value={percentage}  />
         )}
