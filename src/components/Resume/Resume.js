@@ -31,70 +31,75 @@ function Resume() {
 
   return (
     <Container fluid className="resume-section">
-      <Particle />
       <Container>
         <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button variant="primary" href={pdf} target="_blank">
-            <i className="fas fa-download">&nbsp;</i>Download CV
-          </Button>
         </Row>
         <Row className="resume">
           <Col md={6} className="resume-left">
             <h3 className="resume-title">Experience</h3>
             <Resumecontent
-              title="JUNIOR ML ENGINEER [Omdena]"
-              date="June 2020 - August 2020"
+              title="Android Developer Intern at IOT Lab KIIT"
+              date="August 2020 - October 2020"
               content={[
-                "Assembled the data from various social media platforms using Twitter, Reddit.Interpreted the collected text using word-clouds and various other factors that affect the change of sentiments of youth.",
-                " Utilized the data to find the issues using Topic Modelling and Building models using LSTM, BERT to predict the sentiments of the youth.",
+                "Worked with teams of 3 members and developed a document scanning app BitScan.",
               ]}
             />
-            <h3 className="resume-title">Extracurricular Activities</h3>
-            <Resumecontent
-              title="Web Developer [Pantheon-2019 Technical Fest of BIT Mesra]"
+
+             <Resumecontent
+              title="Summer Intern at HighRadius"
+              date="Janurary 2021 - March 2021"
               content={[
-                "Worked on creating the frontend-end of the website using Bootstrap, Javascript.",
+                "Developed a full stack Sales Order Management System application.",
+                "Used Java and React Js for this project"
+               
               ]}
             />
+
+            <h3 className="resume-title">Hobbies and Intrests</h3>
             <Resumecontent
-              title="Web Developer [Bitotsav-2020 Technical Fest of BIT Mesra]"
+              title=""
               content={[
-                "Operated on developing the frontend end of the website using Bootstrap, Javascript and backend APIs using Node.js",
+                "Loves Writing Hindi Poetry.",
+              ]}
+            />
+            <h3 className="resume-title">Volunteering</h3>
+            <Resumecontent
+              title="Member"
+              content={[
+                "IOT Lab KIIT"
               ]}
             />
           </Col>
           <Col md={6} className="resume-right">
             <h3 className="resume-title">Education</h3>
             <Resumecontent
-              title="IMSC MATHS AND COMPUTING [BIT Mesra, Ranchi] "
+              title="B.Tech | KIIT University Bhubaneswar"
               date="2018 - Present"
-              content={[`CGPA: ${cgpa} (Till ${sem}th Sem)`]}
+              content={[`CGPA: 9.35 (Till 5th Sem)`]}
             />
             <Resumecontent
-              title="12TH BOARD [ODM Public School,Odisha]"
-              date="2015 - 2017"
-              content={["Precentage: 88%"]}
+              title="12TH BOARD | S.D. DAV Public School Jamtara"
+              date="2016 - 2018"
+              content={["Precentage: 87%"]}
             />
             <Resumecontent
-              title="10TH BOARD [ST Mary's School,Odisha] "
-              date="2005 - 2015"
-              content={["Precentage: 86%"]}
+              title="10TH BOARD | S.D. DAV Public School Jamtara "
+              date="2016"
+              content={["CGPA: 10"]}
             />
-            <h3 className="resume-title">Ranks and Achivements</h3>
+            <h3 className="resume-title">Achivements</h3>
             <Resumecontent
               title=""
               content={[
-                `Current rank in Spoj ${spojRank}`,
-                `Current rank in HackerRank  ${hackerrank}`,
-                "Top Performer in Code-Break 1.0",
-                "Participant in Hack-A-Bit 2019",
+                "Student of the Year at School for session 2017-18",
+                "Represented my district at State Level Quiz Competition organized by ECI"
               ]}
             />
           </Col>
         </Row>
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button variant="primary" href={pdf} target="_blank">
-            <i className="fas fa-download">&nbsp;</i>Download CV
+            <i className="fas fa-download">&nbsp;</i>Download Resume
           </Button>
         </Row>
       </Container>

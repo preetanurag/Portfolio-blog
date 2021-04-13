@@ -3,12 +3,14 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./read-blog.css";
 import ReactMarkdown from 'react-markdown'
-
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import ChangingProgressProvider from "./ChangingProgressProvider";
 
 
-
+const percentage = 66;
 const ReadBlog = props => {
 
     const [Blog, setBlog] = React.useState([]);
@@ -47,7 +49,17 @@ const ReadBlog = props => {
                 </div>
 
                {isloaded==false ?
-               <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" alt="cover" className="img-thumbnail img-fluid" /> :
+            //    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" alt="cover" className="img-thumbnail img-fluid" /> 
+
+            <div style={{ width: 200, height: 200, padding:20, marginLeft :"430px"}}>
+            <ChangingProgressProvider values={[0, 20, 40, 60, 80, 100]}>
+        {percentage => (
+          <CircularProgressbar value={percentage}  />
+        )}
+      </ChangingProgressProvider>
+            </div>
+
+               :
 
                    <img src={Blog.cover_image.url} alt="cover" className="img-thumbnail img-fluid" style={{width: '100%', height: '50rem'}} /> 
 
