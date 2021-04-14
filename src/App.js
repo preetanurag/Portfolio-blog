@@ -15,8 +15,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import ReadBlog from "./components/Blog/ReadBlog";
 function App() {
   const [load, upadateLoad] = useState(true);
-  const [showcomponent,setshowcomponent] = React.useState(false);
- // const [sel,setsel] = React.useState([]);
   const [selected, setselected] = React.useState("");
   useEffect(() => {
     setTimeout(() => {
@@ -33,10 +31,6 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/project" component={Projects} />
           <Route path="/about" component={About} />
-          {/* {showcomponent ?
-           <Route path="/blog" component={ReadBlog} /> :
-           <Route path="/blog" component={Blog} />
-           }  */}
            <Route path="/blog" component={Blog} >
            <Blog selected={selected} setselected={setselected}/>
            </Route>
@@ -45,7 +39,6 @@ function App() {
           <Route to ={`/readblog/:${selected}`} >
           <ReadBlog selected={selected}/>
           </Route>
-          {/* <Route path={`/:${selected}`} children={<ReadBlog />} /> */}
         </Switch>
         <Footer />
       </div>
