@@ -1,6 +1,6 @@
 <h2 align="center">
   Portfolio-Blog Website<br/>
-  <a href="http://soumyajit.tech/" target="_blank">soumyajit.tech</a>
+  <!-- <a href="http://soumyajit.tech/" target="_blank">soumyajit.tech</a> -->
 </h2>
 <div align="center">
   <img alt="Demo" src="./Images/readme-img.jpg" />
