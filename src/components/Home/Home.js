@@ -22,7 +22,7 @@ function Home() {
               </h1>
               
 
-              <div className="container-fluid d-flex justify-content-center" style={{ padding: 50 }}>
+              <div className="container-fluid d-flex justify-content-center" style={{ paddingTop: 50 }}>
                 <Type />
               </div>
             </Col>
