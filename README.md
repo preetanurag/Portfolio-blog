@@ -3,10 +3,10 @@
   <a href="http://soumyajit.tech/" target="_blank">soumyajit.tech</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="./Images/readme-img.jpg" />
+  <img alt="Demo" src="./Images/readme-img.png" />
 </div>
 
-<br/>
+<br/> 
 
 <center>
 
