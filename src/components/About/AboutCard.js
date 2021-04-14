@@ -10,7 +10,7 @@ function AboutCard() {
   return (
     <Card className="quote-card-view">
       <Card.Body>
-        {/* <blockquote className="blockquote mb-0"> */}
+        
           <p style={{ textAlign: "center",marginLeft:"10px" }}>
             Hello there, I am <span className="purple">Preet Anurag </span>
             a 3rd year  <span className="purple"> B.Tech Student</span>
@@ -43,26 +43,6 @@ function AboutCard() {
         
             
           </p>
-
-
-          
-          {/* <ul>
-            <li className="about-activity">
-              <i className="far fa-hand-point-right"></i> Playing Games
-            </li>
-            <li className="about-activity">
-              <i className="far fa-hand-point-right"></i> Writting Tech Blogs
-            </li>
-            <li className="about-activity">
-              <i className="far fa-hand-point-right"></i> Travelling
-            </li>
-          </ul> */}
-
-          {/* <p style={{ marginBlockEnd: 0, color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
-          </p>
-          <footer className="blockquote-footer">Soumyajit</footer> */}
-        {/* </blockquote> */}
       </Card.Body>
     </Card>
   );
