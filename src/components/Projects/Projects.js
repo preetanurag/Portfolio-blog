@@ -14,7 +14,7 @@ function Projects() {
   const [t,sett]=React.useState(false)
 
   const get = () =>{
-    axios.get("https://preet-portfolio-api.herokuapp.com/projects/")
+    axios.get(`${process.env.REACT_APP_BASE_URL}/projects/`)
     .then(response =>{
          console.log(response.data);
         setProject(response.data)
@@ -56,7 +56,9 @@ React.useEffect(() => {
           </Col>
         </Row>
        :(
-        <div style={{ width: 150, height: 150, padding:20, marginLeft :"480px"}}>
+
+        <div className="container-fluid d-flex justify-content-center">  
+        <div style={{ width: 150, height: 150, padding:20}}>
         <ChangingProgressProvider values={[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]}>
     {percentage => (
       <CircularProgressbar value={percentage}  styles={buildStyles({
@@ -65,6 +67,7 @@ React.useEffect(() => {
       })}/>
     )}
   </ChangingProgressProvider>
+        </div>
         </div>
        )
 

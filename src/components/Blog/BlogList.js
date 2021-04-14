@@ -4,13 +4,14 @@ import axios from "axios";
 import Particle from "../Particle";
 import ChangingProgressProvider from "./ChangingProgressProvider";
 import { CircularProgressbar ,buildStyles} from 'react-circular-progressbar';
+import "dotenv";
 //get();
 const Blogs = props => {
     const [Blog, setBlog] = React.useState([]);
     const [t,sett] = React.useState(false);
     //const [selected, setselected] = React.useState([]);
     const get = () =>{
-        axios.get("https://preet-portfolio-api.herokuapp.com/blogs")
+        axios.get(`${process.env.REACT_APP_BASE_URL}/blogs`)
         .then(response =>{
             // console.log(response.data);
             setBlog(response.data)
@@ -68,8 +69,8 @@ const Blogs = props => {
              : (
            
         
-                  
-                <div style={{ width: 150, height: 150, padding:20, marginLeft :"550px"}}>
+                <div className="container-fluid d-flex justify-content-center">  
+                <div style={{ width: 150, height: 150, padding:20, justifyContent:"center"}}>
                 <ChangingProgressProvider values={[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]}>
             {percentage => (
               <CircularProgressbar value={percentage}  styles={buildStyles({
@@ -78,6 +79,7 @@ const Blogs = props => {
               })}/>
             )}
           </ChangingProgressProvider>
+                </div>
                 </div>
 
              )

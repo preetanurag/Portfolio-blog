@@ -23,7 +23,7 @@ const ReadBlog = props => {
    console.log(props.selected)
     const get = () =>{
         
-        axios.get(`https://preet-portfolio-api.herokuapp.com/blogs/${props.selected}`)
+        axios.get(`${process.env.REACT_APP_BASE_URL}/blogs/${props.selected}`)
         .then(response =>{
             console.log(response.data);
             setBlog(response.data)
@@ -57,13 +57,14 @@ const ReadBlog = props => {
 
                {isloaded==false ?
             //    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" alt="cover" className="img-thumbnail img-fluid" /> 
-
-            <div style={{ width: 200, height: 200, padding:20, marginLeft :"430px"}}>
+         <div className="container-fluid d-flex justify-content-center">  
+            <div style={{ width: 200, height: 200, padding:20}}>
             <ChangingProgressProvider values={[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]}>
         {percentage => (
           <CircularProgressbar value={percentage}  />
         )}
       </ChangingProgressProvider>
+            </div>
             </div>
 
                :
