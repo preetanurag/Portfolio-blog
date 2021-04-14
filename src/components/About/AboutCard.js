@@ -14,9 +14,11 @@ function AboutCard() {
           <p style={{ textAlign: "center",marginLeft:"10px" }}>
             Hello there, I am <span className="purple">Preet Anurag </span>
             a 3rd year  <span className="purple"> B.Tech Student</span>
-            <Col md={6} style={{ padding: 10 ,marginLeft:"110px"}}>
+            <div className="container-fluid d-flex justify-content-center"> 
+            <Col md={6} style={{ padding: 10 ,justifyContent:"center"}}>
           <img src={homeLogo} alt="home pic" className="img-fluid" />
           </Col>
+          </div>
             <br />I am currently pursuing my B.Tech from KIIT University Bhubaneswar in Computer Engineering
             <br />
             <br />

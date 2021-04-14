@@ -13,12 +13,14 @@ function Home() {
         <Particle />
         <Container className="home-content">
           <Row>
-            <Col md={7} className="home-header">
+            <Col md={8} className="home-header">
 
+             
               <h1 className="heading-name">
                 Hello there I'M
                 <strong className="main-name"> PREET ANURAG</strong>
               </h1>
+              
 
               <div style={{ padding: 50, textAlign: "center" }}>
                 <Type />
