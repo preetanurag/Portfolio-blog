@@ -13,15 +13,19 @@ import { BrowserRouter as Router, Route,Link, Switch,useParams } from "react-rou
 const percentage = 66;
 const ReadBlog = props => {
 
-    let { id } = useParams();
+    
     const [Blog, setBlog] = React.useState([]);
     const [isloaded,setisloaded] = React.useState(false);
+    const [title,updatetitle] = React.useState("")
+    const [cimage,updatecimage]= React.useState("")
+    const [content,updatecontent] = React.useState("")
 
    console.log(props.selected)
     const get = () =>{
-        axios.get(`https://blog-api-v01.herokuapp.com/blogs/${props.selected}`)
+        
+        axios.get(`https://preet-portfolio-api.herokuapp.com/blogs/${props.selected}`)
         .then(response =>{
-             console.log(response.data);
+            console.log(response.data);
             setBlog(response.data)
             setisloaded(true);
         })
@@ -41,6 +45,8 @@ const ReadBlog = props => {
             <div className="main">
             <div className="container">
                 {/* <h1>{Blog.title}</h1> */}
+
+                
 
                 <div className="jumbotron jumbotron-fluid">
                     <div className="container">
@@ -62,7 +68,7 @@ const ReadBlog = props => {
 
                :
 
-                   <img src={Blog.cover_image.url} alt="cover" className="img-thumbnail img-fluid" style={{width: '100%', height: '50rem'}} /> 
+                   <img src={Blog.cover.url} alt="cover" className="img-thumbnail img-fluid" style={{width: '100%', height: '50rem'}} /> 
 
                }
                 

@@ -17,15 +17,15 @@ function Home() {
           <Row>
             <Col md={7} className="home-header">
               {/* <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hi There! <span className="wave">👋🏻</span>
+                 <span className="wave">Welcome to My Portfolio Website</span>
               </h1> */}
 
               <h1 className="heading-name">
-                I'M
+                Hello there I'M
                 <strong className="main-name"> PREET ANURAG</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: 50, textAlign: "center" }}>
                 <Type />
               </div>
             </Col>
@@ -35,11 +35,14 @@ function Home() {
             </Col> */}
           </Row>
         </Container>
+        
       </Container>
       {/* <Home2 /> */}
       <Link to="/about">
-      <button className="btn btn-primary" style={{marginBottom:"80px"}}>Know More</button>
+      
+      <button className="btn btn-primary" style={{marginBottom:"80px"}}><i className="cil-external-link">&nbsp;</i>More About Me</button>
       </Link>
+      
     </section>
   );
 }

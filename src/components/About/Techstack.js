@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Techstack(prop) {
   return (
     <div>
-      <Col xs={4} md={2} className="tech-icons">
+      <Col xs={1} md={1} className="tech-icons">
         <i className={`${prop.iconName} tech-icon-images`}></i>
       </Col>
     </div>

@@ -15,7 +15,7 @@ console.log(props.id)
 
 const onbuttonclick = () =>{
     //setshowcomponent(true);
-    props.sett(false);
+    // props.sett(false);
     props.setselected(props.id)
     
 }
@@ -37,9 +37,9 @@ const onbuttonclick = () =>{
                 <Link  to ={`/readblog/:${props.id}`}>
                 <button
                 
-                className="btn btn-outline-danger"
+                className="btn btn-primary"
                 onClick={onbuttonclick}
-                > 
+                ><i className="cil-external-link">&nbsp;</i> 
                 Read Blog
                 </button>
                 </Link>

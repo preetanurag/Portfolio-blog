@@ -10,32 +10,32 @@ function Footer() {
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Designed and Developed by Soumyajit Behera</h3>
+          <h3>Developed by Preet Anurag</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} SB</h3>
+          <h3>Copyright © {year} Preet</h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
             <li className="social-icons">
               <a
-                href="https://github.com/soumyajit4419"
+                href="https://github.com/preetanurag"
                 style={{ color: "white" }}
               >
                 <i className="fab fa-github"></i>
               </a>
             </li>
-            <li className="social-icons">
+            {/* <li className="social-icons">
               <a
                 href="https://twitter.com/Soumyajit4419"
                 style={{ color: "white" }}
               >
                 <i className="fab fa-twitter"></i>
               </a>
-            </li>
+            </li> */}
             <li className="social-icons">
               <a
-                href="https://www.linkedin.com/in/soumyajit4419/"
+                href="https://www.linkedin.com/in/preet-anurag-a7104416b/"
                 style={{ color: "white" }}
               >
                 <i className="fab fa-linkedin-in"></i>
@@ -43,7 +43,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.instagram.com/s.o.u.m.y.a_j.i.t/"
+                href="https://www.instagram.com/_.p._.r._.e._.e._.t._/"
                 style={{ color: "white" }}
               >
                 <i className="fab fa-instagram"></i>

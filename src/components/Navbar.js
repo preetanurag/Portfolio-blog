@@ -76,7 +76,7 @@ function NavBar() {
                 to="/blog"
                 onClick={() => updateExpanded(false)}
               >
-                <i class="fas fa-blog"></i> Blogs
+                <i class="fas fa-edit"></i> Blogs
               </Nav.Link>
             </Nav.Item>
 

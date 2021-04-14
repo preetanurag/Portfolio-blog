@@ -15,34 +15,34 @@ function About() {
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
-            md={7}
+            lg={12}
             style={{
               justifyContent: "center",
               paddingTop: "30px",
               paddingBottom: "50px",
             }}
           >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px",fontFamily:"Georgia, 'Times New Roman', Times, serif" }}>
+              Know <strong className="purple">Me</strong> Better
             </h1>
-            <Aboutcard />
+            
           </Col>
-          <Col
+          <Aboutcard />
+          {/* <Col
             md={5}
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
             <img src={laptopImg} alt="about" className="img-fluid" />
-          </Col>
+          </Col> */}
         </Row>
         <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
+          My <strong className="purple">Skillsets </strong>
         </h1>
         <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-          <Techstack iconName="devicon-cplusplus-line" />
-          <Techstack iconName="devicon-python-plain-wordmark " />
-          <Techstack iconName="cib-pytorch" />
-          <Techstack iconName="cib-tensorflow" />
+          <Techstack iconName="devicon-java-plain" />
+          <Techstack iconName="devicon-materialui-plain " />
+          <Techstack iconName="devicon-android-plain" />
           <Techstack iconName="devicon-javascript-plain " />
           <Techstack iconName="devicon-nodejs-plain-wordmark " />
           <Techstack iconName="devicon-express-original-wordmark" />
@@ -50,19 +50,20 @@ function About() {
           <Techstack iconName="devicon-mongodb-plain-wordmark" />
           <Techstack iconName="devicon-git-plain-wordmark" />
           <Techstack iconName="devicon-bootstrap-plain-wordmark" />
+          <Techstack iconName="devicon-html5-plain" />
         </Row>
         <h1 className="project-heading">
           <strong className="purple">Tools</strong> I use
         </h1>
-        <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-          <Techstack iconName="devicon-linux-plain" />
-          <Techstack iconName="cib-visual-studio-code" />
-          <Techstack iconName="cib-anaconda" />
+        <Row style={{ justifyContent: "center", paddingBottom: "20px" }}>
+          <Techstack iconName="devicon-android-plain" />
+          <Techstack iconName="devicon-visualstudio-plain" />
+          <Techstack iconName="devicon-jupyter-plain" />
           <Techstack iconName="cib-postman" />
-          <Techstack iconName="cib-zeit" />
-          <Techstack iconName="cib-heroku" />
+          <Techstack iconName="devicon-heroku-plain" />
+          <Techstack iconName="devicon-github-original" />
         </Row>
-        <Github />
+        {/* <Github /> */}
       </Container>
     </Container>
   );
