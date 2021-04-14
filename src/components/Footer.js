@@ -25,14 +25,6 @@ function Footer() {
                 <i className="fab fa-github"></i>
               </a>
             </li>
-            {/* <li className="social-icons">
-              <a
-                href="https://twitter.com/Soumyajit4419"
-                style={{ color: "white" }}
-              >
-                <i className="fab fa-twitter"></i>
-              </a>
-            </li> */}
             <li className="social-icons">
               <a
                 href="https://www.linkedin.com/in/preet-anurag-a7104416b/"
