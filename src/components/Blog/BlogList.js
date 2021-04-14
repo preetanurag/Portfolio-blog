@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import img1 from "../../Assets/home-bg.jpg"
 import Card from "./BlogCard";
 import axios from "axios";
-import { BrowserRouter as Router, Route,Link, Switch } from "react-router-dom";
-import Navbar from "../Navbar";
-import ReadBlog from "./ReadBlog";
 import Particle from "../Particle";
 import ChangingProgressProvider from "./ChangingProgressProvider";
 import { CircularProgressbar ,buildStyles} from 'react-circular-progressbar';
@@ -34,7 +30,7 @@ const Blogs = props => {
     React.useEffect(() => {
         handletime(); 
     },[])  
-    
+     
     
     
         return (

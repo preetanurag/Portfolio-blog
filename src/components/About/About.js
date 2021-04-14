@@ -54,7 +54,7 @@ function About() {
           <Techstack iconName="devicon-heroku-plain" />
           <Techstack iconName="devicon-github-original" />
         </Row>
-        {/* <Github /> */}
+        
       </Container>
     </Container>
   );

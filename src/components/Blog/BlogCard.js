@@ -32,7 +32,7 @@ const onbuttonclick = () =>{
                 <p className="card-text text-secondary">
                    {/* {props.content} */}
                 </p>
-                {/* <a href="#" className="btn btn-outline-success">Read Blog</a> */}
+               
                
                 <Link  to ={`/readblog/:${props.id}`}>
                 <button
