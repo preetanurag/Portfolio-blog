@@ -28,52 +28,61 @@ React.useEffect(() => {
 
 
   return (
-    <Container fluid className="project-section">
-      <Particle/>
-      <Container>
+    <div>
+      <div className="main-head">
+        <Particle />
         <h1 className="project-heading">
-          My <strong className="purple">Projects </strong>
+          My Recent <strong className="purple">Works </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Visit my some of the projects
+          Here are a few projects I've worked on recently.
         </p>
-        {t ?
-        
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-          {Project.map((item, index) =>{
-                          
-                          return(
-            <ProjectCard
-              imgPath={item.cover.url}
-              isBlog={false}
-              title={item.title}
-              description={item.description}
-              link={item.link}
-            />
-             )
-                          })}
-          </Col>
-        </Row>
-       :(
-
-        <div className="container-fluid d-flex justify-content-center">  
-        <div style={{ width: 150, height: 150, padding:20}}>
-        <ChangingProgressProvider values={[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]}>
-    {percentage => (
-      <CircularProgressbar value={percentage}  styles={buildStyles({
-        pathColor: "rgb(23, 23, 23)",
-        trailColor: "orange"
-      })}/>
-    )}
-  </ChangingProgressProvider>
-        </div>
-        </div>
-       )
-
-    }
-      </Container>
-    </Container>
+        {t ? (
+          <div className="container-fluid d-flex justify-content-center">
+            <div className="row">
+              {Project.map((item, index) => {
+                return (
+                  <div className="col-md-4">
+                    <ProjectCard
+                      imgPath={item.cover.url}
+                      isBlog={false}
+                      title={item.title}
+                      description={item.description}
+                      link={item.link}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ) : (
+          <div className="container-fluid d-flex justify-content-center">
+            <div
+              style={{
+                width: 150,
+                height: 150,
+                padding: 20,
+                justifyContent: "center",
+              }}
+            >
+              <ChangingProgressProvider
+                values={[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]}
+              >
+                {(percentage) => (
+                  <CircularProgressbar
+                    value={percentage}
+                    styles={buildStyles({
+                      pathColor: "rgb(23, 23, 23)",
+                      trailColor: "orange"
+                    })}
+                  />
+                )}
+              </ChangingProgressProvider>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 
