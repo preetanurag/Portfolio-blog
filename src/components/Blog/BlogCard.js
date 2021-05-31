@@ -34,7 +34,7 @@ const onbuttonclick = () =>{
                 </p>
                
                
-                <Link  to ={`/readblog/:${props.id}`}>
+                <Link  to ={`/readblog/${props.id}`}>
                 <button
                 
                 className="btn btn-primary"

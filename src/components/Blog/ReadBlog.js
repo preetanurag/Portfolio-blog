@@ -21,9 +21,10 @@ const ReadBlog = props => {
     const [content,updatecontent] = React.useState("")
 
    console.log(props.selected)
+   const arr = window.location.pathname.split("/");
     const get = () =>{
         
-        axios.get(`${process.env.REACT_APP_BASE_URL}/blogs/${props.selected}`)
+        axios.get(`${process.env.REACT_APP_BASE_URL}/blogs/${arr[2]}`)
         .then(response =>{
             console.log(response.data);
             setBlog(response.data)
