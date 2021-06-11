@@ -61,7 +61,7 @@ function Resume() {
             <Resumecontent
               title="B.Tech | KIIT University Bhubaneswar"
               date="2018 - Present"
-              content={[`CGPA: 9.35 (Till 5th Sem)`]}
+              content={[`CGPA: 9.37 (Till 6th Sem)`]}
             />
             <Resumecontent
               title="12TH BOARD | S.D. DAV Public School Jamtara"
