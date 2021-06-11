@@ -17,7 +17,7 @@ function Home() {
 
              
               <h1 className="heading-name">
-                Hello there I'M
+                Hello World I'M
                 <strong className="main-name"> PREET ANURAG</strong>
               </h1>
               
